@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#4f46e5"><meta name="color-scheme" content="light dark"><meta property="og:type" content="website"><meta property="og:title" content="RAYAN WORLD — শেখা, খেলা ও আনন্দ"><meta property="og:description" content="শিশুদের জন্য শিক্ষা, গল্প, কবিতা, গেম, স্বাস্থ্য ও খাবার-জ্ঞান এক জায়গায়।"><meta property="og:url" content="https://rayanworld.netlify.app/"><meta name="application-name" content="RAYAN WORLD">
-<title>RAYAN WORLD V30 — আধুনিক শেখা, খেলা ও আনন্দ</title>
+<title>RAYAN WORLD V31 — গুছানো শেখা, খেলা ও আনন্দ</title>
 <meta name="description" content="RAYAN WORLD: শিশুদের কম্পিউটার, AI, বিশ্বজ্ঞান, মহাকাশ, স্বাস্থ্যশিক্ষা, বাংলা, ইংরেজি, আরবি, গণিত, গল্প, কবিতা ও গেমের মজার জগৎ।">
 <meta name="robots" content="index,follow">
 <style>
@@ -60,11 +60,58 @@ input,select,textarea{font:inherit;max-width:100%}
 #rw30BackTop{position:fixed;right:16px;bottom:18px;z-index:30;width:48px;height:48px;border-radius:16px;box-shadow:0 8px 24px #11182730;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}#rw30BackTop.visible{opacity:1;visibility:visible;transform:translateY(0)}
 @media(max-width:980px){.rw30-shortcuts{grid-template-columns:repeat(3,minmax(0,1fr))}.nav{align-items:flex-start}.links{order:3;flex-basis:100%;max-height:none;display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;padding:3px 0 7px}.links a{flex:0 0 auto}.nav #themeBtn{margin-left:auto}}
 @media(max-width:560px){.wrap{padding-left:13px;padding-right:13px}.hero{margin-top:15px;border-radius:23px;min-height:0}.hero h1{font-size:2.15rem}.hero p{font-size:1rem}.rw30-launch-head{align-items:flex-start;flex-direction:column}.rw30-parent-link{white-space:normal}.rw30-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.rw30-shortcuts a{padding:13px 11px}.rw30-shortcuts small{font-size:.75rem}.card,.rw28-card{border-radius:17px}.section{scroll-margin-top:145px}.heading{gap:8px}.heading h2{font-size:1.28rem}}
+
+/* V31: clear information architecture and grouped navigation */
+.nav{position:relative}
+.links{align-items:center;max-height:none;overflow:visible}
+.links>a{padding:8px 10px;border-radius:11px}
+.rw31-menu{position:relative;flex:0 0 auto}
+.rw31-menu summary{list-style:none;cursor:pointer;user-select:none;white-space:nowrap;padding:8px 11px;border-radius:11px;background:var(--line);font-weight:800;color:var(--ink)}
+.rw31-menu summary::-webkit-details-marker{display:none}
+.rw31-menu[open] summary{background:var(--primary);color:#fff}
+.rw31-menu-panel{position:absolute;right:0;top:calc(100% + 12px);width:min(760px,calc(100vw - 28px));display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:18px;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 60px #10182826;z-index:50;max-height:min(72vh,620px);overflow:auto}
+.rw31-menu-group{display:flex;flex-direction:column;gap:5px;padding:11px;border-radius:14px;background:color-mix(in srgb,var(--line) 35%,var(--card))}
+.rw31-menu-group strong{font-size:.94rem;margin-bottom:4px}
+.rw31-menu-group a{display:block;padding:7px 9px;border-radius:9px;color:var(--muted);font-size:.91rem}
+.rw31-menu-group a:hover{background:var(--line);color:var(--ink)}
+.rw31-directory{padding:16px 0 34px;scroll-margin-top:100px}
+.rw31-directory-heading{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:15px}
+.rw31-directory-heading h2{margin:3px 0;font-size:clamp(1.45rem,3vw,2rem);letter-spacing:-.03em}
+.rw31-directory-heading p{margin:0;color:var(--muted)}
+.rw31-home-link{display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-weight:750;white-space:nowrap}
+.rw31-directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.rw31-directory-card{position:relative;overflow:hidden;padding:21px;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);min-width:0}
+.rw31-directory-card:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:var(--rw31-accent)}
+.rw31-study{--rw31-accent:#6366f1}.rw31-play{--rw31-accent:#f59e0b}.rw31-create{--rw31-accent:#ec4899}.rw31-life{--rw31-accent:#10b981}
+.rw31-directory-card>span{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:color-mix(in srgb,var(--rw31-accent) 12%,var(--card));font-size:1.7rem}
+.rw31-directory-card h3{margin:12px 0 4px;font-size:1.13rem}
+.rw31-directory-card p{color:var(--muted);margin:0 0 14px}
+.rw31-directory-card>div{display:flex;gap:8px;flex-wrap:wrap}
+.rw31-directory-card>div a{display:inline-flex;align-items:center;padding:8px 11px;border-radius:10px;background:var(--line);font-size:.88rem;font-weight:750}
+.rw31-directory-card>div a:hover{background:color-mix(in srgb,var(--rw31-accent) 15%,var(--line))}
+.rw31-menu a:focus-visible,.rw31-menu summary:focus-visible,.rw31-directory a:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+@media(max-width:980px){
+ .nav{align-items:center}.links{order:3;flex-basis:100%;display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:visible;padding:4px 0 7px;gap:5px}
+ .links>a{flex:0 0 auto}.rw31-menu-panel{position:fixed;top:120px;right:12px;width:min(760px,calc(100vw - 24px))}
+}
+@media(max-width:560px){
+ .rw31-menu-panel{grid-template-columns:1fr;top:118px;max-height:calc(100dvh - 140px);padding:12px;gap:9px}
+ .rw31-directory-grid{grid-template-columns:1fr}.rw31-directory-heading{align-items:flex-start;flex-direction:column}
+ .rw31-directory-card{padding:18px}.links>a,.rw31-menu summary{font-size:.84rem}
+}
+
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 </style>
 </head>
 <body><a class="skip-link" href="#mainContentV27">মূল কনটেন্টে যান</a>
-<header class="top"><div class="wrap nav"><a class="brand" href="#home">🌈 RAYAN WORLD <small>V30</small></a><nav class="links"><a href="#worldExplorerV27">🌍 এক্সপ্লোর</a><a href="#joyHealthFoodV28">😄 আনন্দ, স্বাস্থ্য ও খাবার</a><a href="#photos">ছবির জগৎ</a><a href="#learn">পড়াশোনা</a><a href="#arabic">আরবি শিক্ষা</a><a href="#tenShortSurahsV26">📖 ১০টি ছোট সূরা</a><a href="#discover">বিশ্বজ্ঞান ও বিজ্ঞান</a><a href="#englishFun">ইংরেজি বলি</a><a href="#scienceLab">বিজ্ঞান ল্যাব</a><a href="#games">গেম</a><a href="#story">গল্প-কবিতা</a><a href="#reading">পড়া-লেখা</a><a href="#draw">আঁকাআঁকি</a><a href="#videos">ভিডিও</a><a href="#creative">সৃজনশীলতা</a><a href="#rwPlayZoneV25">🏆 লেভেল ও লিডারবোর্ড</a><a href="#rwPlayZoneV24">🎁 পয়েন্ট ও পুরস্কার</a><a href="#incomeHubV23">💰 আয়ের কেন্দ্র</a><a href="#monetize">অভিভাবক কর্নার</a><a href="#gameCenterV20">🎮 নতুন গেম</a><a href="#gradeSchoolV20">📚 শ্রেণিভিত্তিক পড়া</a><a href="#drawStudioV20">🎨 আঁকার স্টুডিও</a><a href="#studyHubV19">⏱️ শেখার সময়</a><a href="#dailyMissionV15">⭐ আজকের মিশন</a><a href="#accountV16">👤 লগইন/সাইন আপ</a><a href="#dictionaryV16">📘 ডিকশনারি</a></nav><button class="soft" id="themeBtn" aria-label="থিম পরিবর্তন">🌙</button></div></header>
+<header class="top"><div class="wrap nav"><a class="brand" href="#home">🌈 RAYAN WORLD <small>V31</small></a><nav class="links" aria-label="প্রধান মেনু">
+<a href="#home">🏠 হোম</a><a href="#learn">📚 পড়াশোনা</a><a href="#games">🎮 গেম</a><a href="#story">📖 গল্প-কবিতা</a><a href="#worldExplorerV27">🌍 আবিষ্কার</a>
+<details class="rw31-menu"><summary>☰ সব বিভাগ</summary><div class="rw31-menu-panel">
+<div class="rw31-menu-group"><strong>📚 শেখা ও পড়াশোনা</strong><a href="#learn">বাংলা ও সংখ্যা</a><a href="#classroom">শ্রেণিভিত্তিক পড়া</a><a href="#englishFun">ইংরেজি</a><a href="#scienceLab">বিজ্ঞান ল্যাব</a><a href="#discover">বিশ্বজ্ঞান</a><a href="#arabic">আরবি শিক্ষা</a><a href="#tenShortSurahsV26">১০টি ছোট সূরা</a><a href="#dictionaryV16">বাংলা-ইংরেজি ডিকশনারি</a></div>
+<div class="rw31-menu-group"><strong>🎨 খেলা ও সৃজনশীলতা</strong><a href="#games">সব গেম</a><a href="#rwPlayZoneV25">লেভেল ও লিডারবোর্ড</a><a href="#rwPlayZoneV24">পয়েন্ট ও পুরস্কার</a><a href="#draw">আঁকাআঁকি</a><a href="#creative">সৃজনশীলতা</a><a href="#photos">ছবির জগৎ</a><a href="#videos">ভিডিও কর্নার</a><a href="#babuPlay">বাবুর কর্নার</a></div>
+<div class="rw31-menu-group"><strong>💚 আনন্দ ও ভালো থাকা</strong><a href="#joyHealthFoodV28">আনন্দ ও স্বাস্থ্য</a><a href="#reading">পড়া-লেখা</a><a href="#story">গল্প ও কবিতা</a><a href="#dailyMissionV15">আজকের মিশন</a><a href="#studyHubV19">শেখার সময় ও অগ্রগতি</a></div>
+<div class="rw31-menu-group"><strong>👨‍👩‍👧 অভিভাবক</strong><a href="#monetize">অভিভাবক কর্নার</a><a href="#incomeHubV23">আয়ের কেন্দ্র</a><a href="#accountV16">লগইন / সাইন আপ</a></div>
+</div></details></nav><button class="soft" id="themeBtn" aria-label="থিম পরিবর্তন">🌙</button></div></header>
 <main class="wrap" id="mainContentV27">
 <section class="hero" id="home"><div><span class="pill">✨ শেখা • খেলা • আনন্দ</span><h1>স্বাগতম <br>RAYAN WORLD-এ!</h1><p>শিশুদের জন্য নিরাপদ, রঙিন ও আনন্দময় একটি ছোট্ট জগৎ। খেলতে খেলতে শিখি, গল্প শুনি, ছবি আঁকি!</p><button onclick="document.querySelector('#games').scrollIntoView()">🎮 গেম খেলি</button><button onclick="document.querySelector('#learn').scrollIntoView()">📚 শিখতে শুরু করি</button><p class="small" style="color:#fff;margin-bottom:0">বিশেষ বন্ধু: বাবু 🧒⭐</p></div><div class="mascot" aria-label="কার্টুন বাবু">🧒🏻🦸‍♂️</div></section>
 
@@ -79,6 +126,16 @@ input,select,textarea{font:inherit;max-width:100%}
 <a href="#worldExplorerV27"><span>🌍</span><strong>বিশ্ব এক্সপ্লোর</strong><small>জানার অনেক কিছু</small></a>
 </div>
 <div class="rw30-tip"><span aria-hidden="true">✨</span><p><strong>আজকের ছোট্ট লক্ষ্য:</strong> একটি নতুন বিষয় শেখো, একটি খেলা খেলো, আর পরিবারের কারও সঙ্গে তোমার শেখা বিষয়টি ভাগ করে নাও।</p></div>
+</section>
+
+<section class="rw31-directory" id="allSections">
+<div class="rw31-directory-heading"><div><span class="rw30-eyebrow">এক নজরে সব</span><h2>কোন জগতে যাবে?</h2><p>বিভাগ বেছে নাও—সবকিছু সহজভাবে সাজানো।</p></div><a href="#home" class="rw31-home-link">↑ ওপরে যাও</a></div>
+<div class="rw31-directory-grid">
+<article class="rw31-directory-card rw31-study"><span>📚</span><h3>১. শেখার জগৎ</h3><p>বর্ণমালা, সংখ্যা, ইংরেজি, বিজ্ঞান, বিশ্বজ্ঞান ও আরবি।</p><div><a href="#learn">শেখা শুরু</a><a href="#arabic">আরবি শিক্ষা</a><a href="#discover">বিশ্বজ্ঞান</a></div></article>
+<article class="rw31-directory-card rw31-play"><span>🎮</span><h3>২. গেম ও চ্যালেঞ্জ</h3><p>মজার গেম, কুইজ, পয়েন্ট, লেভেল ও দৈনিক মিশন।</p><div><a href="#games">গেম খেলি</a><a href="#rwPlayZoneV25">আমার লেভেল</a><a href="#dailyMissionV15">আজকের মিশন</a></div></article>
+<article class="rw31-directory-card rw31-create"><span>🎨</span><h3>৩. গল্প ও সৃজনশীলতা</h3><p>গল্প, কবিতা, পড়া-লেখা, আঁকা, ছবি ও বাবুর কর্নার।</p><div><a href="#story">গল্প-কবিতা</a><a href="#draw">আঁকি ও রং করি</a><a href="#babuPlay">বাবুর কর্নার</a></div></article>
+<article class="rw31-directory-card rw31-life"><span>🌱</span><h3>৪. আনন্দ ও ভালো থাকা</h3><p>স্বাস্থ্য, খাবার-জ্ঞান, নিরাপত্তা, ভালো অভ্যাস ও পরিবার।</p><div><a href="#joyHealthFoodV28">আনন্দ ও স্বাস্থ্য</a><a href="#photos">ছবির জগৎ</a><a href="#monetize">অভিভাবক কর্নার</a></div></article>
+</div>
 </section>
 
 <section class="section" id="joyHealthFoodV28">
@@ -1009,6 +1066,15 @@ function rwCalcIncomeV29(){
  function update(){const max=document.documentElement.scrollHeight-window.innerHeight;const y=window.scrollY; b.classList.toggle('visible',y>550);document.documentElement.style.setProperty('--rw30-scroll-progress',max>0?(y/max*100)+'%':'0%');ticking=false;}
  window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(update);ticking=true;}},{passive:true});
  update();
+})();
+</script>
+<script id="rw31-navigation">
+(function(){
+ const menu=document.querySelector('.rw31-menu');
+ if(!menu)return;
+ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.open=false;}));
+ document.addEventListener('click',e=>{if(menu.open&&!menu.contains(e.target))menu.open=false;});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.open){menu.open=false;menu.querySelector('summary').focus();}});
 })();
 </script>
 </body></html>
