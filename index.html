@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6c63ff">
-<title>RAYAN WORLD V25 — শিশুদের শেখা, গেম ও লেভেল</title>
+<title>RAYAN WORLD V27 — World Explorer for Kids</title>
 <meta name="description" content="RAYAN WORLD: শিশুদের কম্পিউটার, AI, বিশ্বজ্ঞান, মহাকাশ, স্বাস্থ্যশিক্ষা, বাংলা, ইংরেজি, আরবি, গণিত, গল্প, কবিতা ও গেমের মজার জগৎ।">
 <meta name="robots" content="index,follow">
 <style>
@@ -29,6 +29,9 @@
 #arabic .arabicPhrase{font-family:serif;font-size:30px;text-align:center;padding:12px;background:var(--bg);border-radius:14px;margin:10px 0}
 #arabic .out{min-height:48px}
 
+
+/* V27 World Explorer — accessible, responsive discovery hub */
+.skip-link{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--card);color:var(--ink);padding:10px;border-radius:10px}.skip-link:focus{left:8px}.rw27-tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}.rw27-tools input,.rw27-tools select{border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);padding:11px;min-width:0}.rw27-tools input{flex:1;min-width:180px}.rw27-explore-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.rw27-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:7px;min-width:0}.rw27-card .rw27-icon{font-size:2rem}.rw27-card h3{margin:0}.rw27-card p{margin:0;color:var(--muted);font-size:.93rem;flex:1}.rw27-card .rw27-link{display:inline-block;margin-top:5px;background:var(--line);color:var(--ink);padding:8px 10px;border-radius:10px;font-weight:750;text-align:center}.rw27-card[hidden]{display:none}.rw27-note{padding:13px 15px;border-radius:14px;background:var(--line);margin-top:14px}.rw27-tools button{white-space:nowrap}@media(max-width:850px){.rw27-explore-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:420px){.rw27-explore-grid{grid-template-columns:1fr}.rw27-tools input{min-width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 
 <style>
@@ -38,10 +41,37 @@
 @media(max-width:450px){.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-art{height:105px}}
 </style>
 </head>
-<body>
-<header class="top"><div class="wrap nav"><a class="brand" href="#home">🌈 RAYAN WORLD <small>V25</small></a><nav class="links"><a href="#photos">ছবির জগৎ</a><a href="#learn">পড়াশোনা</a><a href="#arabic">আরবি শিক্ষা</a><a href="#tenShortSurahsV26">📖 ১০টি ছোট সূরা</a><a href="#discover">বিশ্বজ্ঞান ও বিজ্ঞান</a><a href="#englishFun">ইংরেজি বলি</a><a href="#scienceLab">বিজ্ঞান ল্যাব</a><a href="#games">গেম</a><a href="#story">গল্প-কবিতা</a><a href="#reading">পড়া-লেখা</a><a href="#draw">আঁকাআঁকি</a><a href="#videos">ভিডিও</a><a href="#creative">সৃজনশীলতা</a><a href="#rwPlayZoneV25">🏆 লেভেল ও লিডারবোর্ড</a><a href="#rwPlayZoneV24">🎁 পয়েন্ট ও পুরস্কার</a><a href="#incomeHubV23">💰 আয়ের কেন্দ্র</a><a href="#monetize">অভিভাবক কর্নার</a><a href="#gameCenterV20">🎮 নতুন গেম</a><a href="#gradeSchoolV20">📚 শ্রেণিভিত্তিক পড়া</a><a href="#drawStudioV20">🎨 আঁকার স্টুডিও</a><a href="#studyHubV19">⏱️ শেখার সময়</a><a href="#dailyMissionV15">⭐ আজকের মিশন</a><a href="#accountV16">👤 লগইন/সাইন আপ</a><a href="#dictionaryV16">📘 ডিকশনারি</a></nav><button class="soft" id="themeBtn" aria-label="থিম পরিবর্তন">🌙</button></div></header>
-<main class="wrap">
+<body><a class="skip-link" href="#mainContentV27">মূল কনটেন্টে যান</a>
+<header class="top"><div class="wrap nav"><a class="brand" href="#home">🌈 RAYAN WORLD <small>V27</small></a><nav class="links"><a href="#worldExplorerV27">🌍 এক্সপ্লোর</a><a href="#photos">ছবির জগৎ</a><a href="#learn">পড়াশোনা</a><a href="#arabic">আরবি শিক্ষা</a><a href="#tenShortSurahsV26">📖 ১০টি ছোট সূরা</a><a href="#discover">বিশ্বজ্ঞান ও বিজ্ঞান</a><a href="#englishFun">ইংরেজি বলি</a><a href="#scienceLab">বিজ্ঞান ল্যাব</a><a href="#games">গেম</a><a href="#story">গল্প-কবিতা</a><a href="#reading">পড়া-লেখা</a><a href="#draw">আঁকাআঁকি</a><a href="#videos">ভিডিও</a><a href="#creative">সৃজনশীলতা</a><a href="#rwPlayZoneV25">🏆 লেভেল ও লিডারবোর্ড</a><a href="#rwPlayZoneV24">🎁 পয়েন্ট ও পুরস্কার</a><a href="#incomeHubV23">💰 আয়ের কেন্দ্র</a><a href="#monetize">অভিভাবক কর্নার</a><a href="#gameCenterV20">🎮 নতুন গেম</a><a href="#gradeSchoolV20">📚 শ্রেণিভিত্তিক পড়া</a><a href="#drawStudioV20">🎨 আঁকার স্টুডিও</a><a href="#studyHubV19">⏱️ শেখার সময়</a><a href="#dailyMissionV15">⭐ আজকের মিশন</a><a href="#accountV16">👤 লগইন/সাইন আপ</a><a href="#dictionaryV16">📘 ডিকশনারি</a></nav><button class="soft" id="themeBtn" aria-label="থিম পরিবর্তন">🌙</button></div></header>
+<main class="wrap" id="mainContentV27">
 <section class="hero" id="home"><div><span class="pill">✨ শেখা • খেলা • আনন্দ</span><h1>স্বাগতম <br>RAYAN WORLD-এ!</h1><p>শিশুদের জন্য নিরাপদ, রঙিন ও আনন্দময় একটি ছোট্ট জগৎ। খেলতে খেলতে শিখি, গল্প শুনি, ছবি আঁকি!</p><button onclick="document.querySelector('#games').scrollIntoView()">🎮 গেম খেলি</button><button onclick="document.querySelector('#learn').scrollIntoView()">📚 শিখতে শুরু করি</button><p class="small" style="color:#fff;margin-bottom:0">বিশেষ বন্ধু: বাবু 🧒⭐</p></div><div class="mascot" aria-label="কার্টুন বাবু">🧒🏻🦸‍♂️</div></section>
+
+<section class="section" id="worldExplorerV27">
+ <div class="heading"><h2>🌍 RAYAN WORLD — World Explorer</h2><span class="badge">V27 • নতুন অভিজ্ঞতা</span></div>
+ <p class="sub">এক জায়গা থেকে শেখা, আবিষ্কার, কল্পনা ও অনুশীলন শুরু করো। নিজের পছন্দের বিষয় খুঁজে নাও—ছোট ছোট ধাপে, আনন্দের সঙ্গে।</p>
+ <div class="rw27-tools" role="search" aria-label="শেখার বিষয় খুঁজুন">
+  <input id="rw27Search" type="search" placeholder="🔎 খুঁজুন: বিজ্ঞান, গল্প, আরবি, আঁকা…" aria-label="বিষয় খুঁজুন">
+  <select id="rw27Category" aria-label="বিষয়ের ধরন বেছে নিন"><option value="all">সব বিষয়</option><option value="learn">পড়াশোনা</option><option value="discover">আবিষ্কার</option><option value="create">সৃজনশীলতা</option><option value="play">খেলা</option><option value="care">ভালো থাকা</option></select>
+  <button type="button" class="soft" id="rw27Clear">রিসেট</button>
+ </div>
+ <div class="rw27-tools" aria-label="অ্যাক্সেসিবিলিটি কন্ট্রোল"><strong>সহজে পড়ুন:</strong><button type="button" class="soft" id="rw27Smaller" aria-label="লেখা ছোট করুন">A−</button><button type="button" class="soft" id="rw27Larger" aria-label="লেখা বড় করুন">A+</button><button type="button" class="secondary" id="rw27Read">🔊 এই পরিচিতি পড়ে শোনাও</button><span class="small" id="rw27FontStatus" aria-live="polite">লেখার আকার স্বাভাবিক</span></div>
+ <div class="rw27-explore-grid" id="rw27Cards">
+  <article class="rw27-card" data-category="learn" data-search="বাংলা অক্ষর পড়া লেখা বর্ণমালা ভাষা"><div class="rw27-icon">🔤</div><h3>ভাষার বন্ধু</h3><p>বাংলা বর্ণ, পড়া-লেখা ও শব্দচর্চা করে ভাষার ভিত্তি মজবুত করো।</p><a class="rw27-link" href="#learn">শুরু করি ↗</a></article>
+  <article class="rw27-card" data-category="learn" data-search="আরবি কুরআন ইসলাম সূরা উচ্চারণ অর্থ"><div class="rw27-icon">📖</div><h3>আরবি ও ছোট সূরা</h3><p>আরবি বর্ণ, পরিচিত শব্দ এবং ১০টি ছোট সূরার পাঠ, আনুমানিক উচ্চারণ ও ভাবার্থ।</p><a class="rw27-link" href="#tenShortSurahsV26">শিখতে যাই ↗</a></article>
+  <article class="rw27-card" data-category="learn" data-search="ইংরেজি কথা বলা শব্দ ভাষা"><div class="rw27-icon">💬</div><h3>ইংরেজি বলি</h3><p>সহজ শব্দ ও দৈনন্দিন কথোপকথনের অনুশীলন করো।</p><a class="rw27-link" href="#englishFun">অনুশীলন ↗</a></article>
+  <article class="rw27-card" data-category="discover" data-search="বিজ্ঞান মহাকাশ গ্রহ প্রকৃতি পরীক্ষা আবিষ্কার"><div class="rw27-icon">🔭</div><h3>বিজ্ঞান ও মহাকাশ</h3><p>প্রশ্ন করো, পর্যবেক্ষণ করো, নতুন বিষয় জানো।</p><a class="rw27-link" href="#scienceLab">আবিষ্কার করি ↗</a></article>
+  <article class="rw27-card" data-category="discover" data-search="বিশ্বজ্ঞান দেশ সংস্কৃতি ইতিহাস পৃথিবী বৈচিত্র্য"><div class="rw27-icon">🗺️</div><h3>পৃথিবী ও সংস্কৃতি</h3><p>বিভিন্ন দেশ, ভাষা, ঐতিহ্য ও মানুষের বৈচিত্র্য সম্পর্কে জানো।</p><a class="rw27-link" href="#discover">বিশ্ব ঘুরি ↗</a></article>
+  <article class="rw27-card" data-category="learn" data-search="গণিত সংখ্যা যোগ বিয়োগ স্কুল শ্রেণি"><div class="rw27-icon">🧮</div><h3>গণিতের মজা</h3><p>সংখ্যা, যুক্তি ও ছোট ছোট প্রশ্নে নিজের দক্ষতা বাড়াও।</p><a class="rw27-link" href="#gradeSchoolV20">চর্চা করি ↗</a></article>
+  <article class="rw27-card" data-category="create" data-search="আঁকা ছবি রং সৃজনশীলতা শিল্প ডিজাইন"><div class="rw27-icon">🎨</div><h3>সৃজনশীল স্টুডিও</h3><p>নিজের কল্পনা দিয়ে আঁকো, রং করো এবং নতুন কিছু বানাও।</p><a class="rw27-link" href="#drawStudioV20">স্টুডিও খুলুন ↗</a></article>
+  <article class="rw27-card" data-category="create" data-search="গল্প কবিতা পড়া কল্পনা লেখা"><div class="rw27-icon">📚</div><h3>গল্প ও কবিতা</h3><p>গল্প পড়ো, ছড়া উপভোগ করো, নিজের ভাবনাও লিখে রাখো।</p><a class="rw27-link" href="#story">পড়তে যাই ↗</a></article>
+  <article class="rw27-card" data-category="play" data-search="গেম খেলা ধাঁধা স্মৃতি মজা"><div class="rw27-icon">🕹️</div><h3>খেলে শিখি</h3><p>ছোট গেম ও কুইজে আনন্দের সঙ্গে অনুশীলন করো।</p><a class="rw27-link" href="#gameCenterV20">গেম বাছি ↗</a></article>
+  <article class="rw27-card" data-category="play" data-search="পয়েন্ট লেভেল পুরস্কার সেরা স্কোর"><div class="rw27-icon">🏆</div><h3>আমার শেখার অগ্রগতি</h3><p>পয়েন্ট, লেভেল এবং এই ডিভাইসে রাখা নিজের সেরা স্কোর দেখো।</p><a class="rw27-link" href="#rwPlayZoneV25">অগ্রগতি দেখি ↗</a></article>
+  <article class="rw27-card" data-category="care" data-search="নিরাপত্তা অনলাইন গোপনীয়তা অভিভাবক নিরাপদ থাকা"><div class="rw27-icon">🛡️</div><h3>নিরাপদে অনলাইন</h3><p>ব্যক্তিগত তথ্য, পাসওয়ার্ড ও অনলাইন আচরণ নিয়ে অভিভাবকের সঙ্গে কথা বলো।</p><a class="rw27-link" href="#monetize">অভিভাবক কর্নার ↗</a></article>
+  <article class="rw27-card" data-category="care" data-search="মন ভালো স্বাস্থ্য অভ্যাস বিরতি পানি বিশ্রাম"><div class="rw27-icon">🌱</div><h3>ভালো অভ্যাস</h3><p>পানি পান, বিশ্রাম, নড়াচড়া ও স্ক্রিন থেকে বিরতি নেওয়ার কথা মনে রাখো।</p><a class="rw27-link" href="#dailyMissionV15">আজকের মিশন ↗</a></article>
+ </div>
+ <p id="rw27NoResults" class="rw27-note" hidden>এই নামে কোনো বিষয় পাওয়া যায়নি। অন্য শব্দ দিয়ে খুঁজে দেখো।</p>
+ <div class="rw27-note"><strong>🌈 সবার জন্য:</strong> এই সাইটের লক্ষ্য হলো কৌতূহল, সৃজনশীলতা, ভাষা ও নানা সংস্কৃতির প্রতি সম্মান শেখানো। শিশুদের অনলাইন কার্যক্রমে অভিভাবকের সহায়তা নাও। পয়েন্ট ও স্কোরের কিছু অংশ শুধু এই ডিভাইসেই সংরক্ষিত হয়।</div>
+</section>
 <section class="section" id="photos"><div class="heading"><h2>📸 ছবির জগৎ ও রায়ানের কার্টুন</h2><span class="badge">V10 নতুন</span></div><p class="sub">রায়ানের ছবি যোগ করো, কার্টুন বন্ধুকে দেখো, আর পশুপাখি ও প্রকৃতির ছবি দিয়ে শেখো।</p>
 <div class="card" style="margin-bottom:14px"><div class="row" style="align-items:center"><div id="rayanPhotoFrame" class="photo-art" style="width:145px;height:145px;flex-shrink:0"><span>🧒🏻</span></div><div style="flex:1;min-width:180px"><h3>🌟 আমার নিজের ছবি</h3><p class="small">রায়ান/বাবুর ছবি ফোন থেকে বেছে নাও। ছবিটি এই ব্রাউজারেই রাখা হবে।</p><div class="photo-tools"><input type="file" id="rayanPhotoInput" accept="image/*" aria-label="রায়ানের ছবি বেছে নিন"><button onclick="saveRayanPhoto()">ছবি যোগ করো</button><button class="soft" onclick="removeRayanPhoto()">ছবি সরাও</button></div><p id="photoUploadOut" class="small">এখনো কোনো ব্যক্তিগত ছবি যোগ করা হয়নি।</p></div></div></div>
 <div class="photo-grid">
@@ -366,7 +396,7 @@
  <p class="notice">অভিভাবকদের জন্য: এটি শেখার ডেমো। পয়েন্ট ও পুরস্কার কেবল এই ব্রাউজারেই সংরক্ষিত থাকে; সার্ভারে সিঙ্ক হয় না এবং বাস্তব অর্থমূল্য নেই।</p>
 </section>
 
-<footer class="footer"><b>🌈 RAYAN WORLD V25</b><br>শিশুদের শেখা, খেলা, পড়া ও সৃজনশীলতার জন্য তৈরি একটি ডেমো ওয়েবসাইট। V25-তে লেভেল প্রগ্রেস ও ডিভাইস-ভিত্তিক সেরা স্কোরের তালিকা যোগ হয়েছে।<br><small>এটি HTML ফাইল; অনলাইনে প্রকাশ করতে হোস্টিংয়ে আপলোড করতে হবে। বিজ্ঞাপন বা আয় স্বয়ংক্রিয়ভাবে সক্রিয় নয়।</small></footer>
+<footer class="footer"><b>🌈 RAYAN WORLD V27</b><br>শিশুদের শেখা, আবিষ্কার, ভাষা, গল্প, খেলা ও সৃজনশীলতার জন্য তৈরি একটি আনন্দময় শেখার জগৎ। V27-তে সার্চযোগ্য World Explorer, বিষয়ভিত্তিক ফিল্টার ও লেখার আকার বদলানোর সুবিধা যোগ হয়েছে।<br><small>এটি HTML ফাইল; অনলাইনে প্রকাশ করতে হোস্টিংয়ে আপলোড করতে হবে। বিজ্ঞাপন বা আয় স্বয়ংক্রিয়ভাবে সক্রিয় নয়।</small></footer>
 <script>
 let score=Number(localStorage.getItem('babyScore')||0);let dailyCount=Number(localStorage.getItem('babyDailyCount')||0);let dailyDate=localStorage.getItem('babyDailyDate')||'';const todayKey=new Date().toLocaleDateString('en-CA');if(dailyDate!==todayKey){dailyCount=0;dailyDate=todayKey;localStorage.setItem('babyDailyCount','0');localStorage.setItem('babyDailyDate',todayKey)}function addScore(n=1){score+=n;localStorage.setItem('babyScore',String(score));document.getElementById('score').textContent=score;document.getElementById('progressBar').style.width=Math.min(100,score*5)+'%';if(dailyCount<3){dailyCount++;localStorage.setItem('babyDailyCount',String(dailyCount));document.getElementById('dailyCount').textContent=dailyCount;document.getElementById('dailyProgress').style.width=(dailyCount/3*100)+'%';if(dailyCount>=3)document.getElementById('dailyOut').textContent='চ্যালেঞ্জ শেষ! পুরস্কার নিতে পারো! 🎉'}updateRank();if(window.rwSyncProgress)window.rwSyncProgress()}function resetScore(){score=0;localStorage.setItem('babyScore','0');document.getElementById('score').textContent=0;document.getElementById('progressBar').style.width='0%';updateRank();if(window.rwSyncProgress)window.rwSyncProgress()}
 const letters=[['অ','অজগর'],['আ','আম'],['ই','ইলিশ'],['ঈ','ঈগল'],['উ','উট'],['ঊ','ঊষা'],['ঋ','ঋতু'],['এ','একতারা'],['ঐ','ঐক্য'],['ও','ওল'],['ঔ','ঔষধ'],['ক','কলা'],['খ','খরগোশ'],['গ','গরু'],['ঘ','ঘুড়ি'],['চ','চাঁদ'],['ছ','ছাতা'],['জ','জাহাজ'],['ট','টিয়া'],['ড','ডালিম'],['ত','তারা'],['দ','দই'],['ন','নৌকা'],['প','পাখি'],['ফ','ফুল'],['ব','বই'],['ম','মাছ'],['র','রথ'],['ল','লাটিম'],['স','সাপ'],['হ','হাতি']];const ab=document.getElementById('alphabet');letters.forEach(([l,w])=>{let b=document.createElement('button');b.textContent=l;b.onclick=()=>{document.getElementById('letterOut').textContent=l+' — '+w;};ab.appendChild(b)});
@@ -851,4 +881,15 @@ document.addEventListener('DOMContentLoaded',()=>{rwSearchDictionary();rwShowAut
 })();
 </script>
 
+
+<script>
+(function(){
+ const search=document.getElementById('rw27Search'),category=document.getElementById('rw27Category'),cards=[...document.querySelectorAll('#rw27Cards .rw27-card')],noResults=document.getElementById('rw27NoResults');
+ function filter(){const q=(search.value||'').trim().toLocaleLowerCase('bn');let shown=0;cards.forEach(card=>{const text=(card.innerText+' '+card.dataset.search).toLocaleLowerCase('bn');const matchText=!q||text.includes(q);const matchCat=category.value==='all'||card.dataset.category===category.value;card.hidden=!(matchText&&matchCat);if(!card.hidden)shown++});noResults.hidden=shown!==0}
+ search.addEventListener('input',filter);category.addEventListener('change',filter);document.getElementById('rw27Clear').addEventListener('click',()=>{search.value='';category.value='all';filter();search.focus()});
+ let fontScale=1;const status=document.getElementById('rw27FontStatus');function setFont(){document.documentElement.style.fontSize=(16*fontScale)+'px';status.textContent='লেখার আকার '+(fontScale===1?'স্বাভাবিক':fontScale<1?'ছোট':'বড়')}
+ document.getElementById('rw27Smaller').addEventListener('click',()=>{fontScale=Math.max(.875,fontScale-.0625);setFont()});document.getElementById('rw27Larger').addEventListener('click',()=>{fontScale=Math.min(1.25,fontScale+.0625);setFont()});
+ document.getElementById('rw27Read').addEventListener('click',()=>{const text='রায়ান ওয়ার্ল্ড ওয়ার্ল্ড এক্সপ্লোরার। এখানে ভাষা, আরবি ও ছোট সূরা, ইংরেজি, বিজ্ঞান, পৃথিবী ও সংস্কৃতি, গণিত, আঁকাআঁকি, গল্প, গেম, নিরাপদ অনলাইন এবং ভালো অভ্যাস শেখা যায়।';if(!('speechSynthesis'in window)){status.textContent='এই ব্রাউজারে পড়ে শোনানোর সুবিধা নেই।';return}speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(text);utterance.lang='bn-BD';utterance.rate=.88;speechSynthesis.speak(utterance)});
+})();
+</script>
 </body></html>
