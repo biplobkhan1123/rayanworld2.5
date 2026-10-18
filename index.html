@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6c63ff">
-<title>RAYAN WORLD V16 — কম্পিউটার, AI, বিশ্বজ্ঞান ও মহাকাশ</title>
+<title>RAYAN WORLD V17 — কম্পিউটার, AI, বিশ্বজ্ঞান ও মহাকাশ</title>
 <meta name="description" content="RAYAN WORLD: শিশুদের কম্পিউটার, AI, বিশ্বজ্ঞান, মহাকাশ, স্বাস্থ্যশিক্ষা, বাংলা, ইংরেজি, আরবি, গণিত, গল্প, কবিতা ও গেমের মজার জগৎ।">
 <meta name="robots" content="index,follow">
 <style>
@@ -170,14 +170,14 @@
   <div class="heading"><h2>👤 লগইন ও সাইন আপ</h2><span class="badge">V16 নতুন</span></div>
   <p class="sub">নিজের নাম দিয়ে এই ডিভাইসে একটি শেখার প্রোফাইল তৈরি করো।</p>
   <div class="card">
-    <div class="out" style="background:#fff0b8;color:#5b4310"><strong>গুরুত্বপূর্ণ:</strong> এটি এখন ব্রাউজারভিত্তিক ডেমো অ্যাকাউন্ট—প্রোফাইল শুধু এই ডিভাইস/ব্রাউজারে থাকবে। এটি প্রকৃত অনলাইন অ্যাকাউন্ট নয় এবং অন্য ডিভাইসে সিঙ্ক হবে না। এখানে ব্যক্তিগত বা অন্য কোথাও ব্যবহৃত পাসওয়ার্ড ব্যবহার কোরো না।</div>
+    <div class="out" style="background:#e7f8ed;color:#155b31"><strong>অনলাইন অ্যাকাউন্ট:</strong> Supabase Authentication ব্যবহার করা হচ্ছে। ইমেইল যাচাইকরণ চালু থাকলে ইনবক্সে আসা লিংকে চাপ দিতে হবে। শেখার স্কোর অ্যাকাউন্টে সংরক্ষণের চেষ্টা করা হবে।</div>
     <div id="rwAccountLoggedOut">
       <div class="row" style="margin:10px 0"><button id="rwSignupTab" onclick="rwShowAuth('signup')">সাইন আপ</button><button class="soft" id="rwLoginTab" onclick="rwShowAuth('login')">লগইন</button></div>
       <form id="rwAuthForm" onsubmit="return rwSubmitAuth(event)">
         <label for="rwAuthName">তোমার নাম (সাইন আপের জন্য)</label><input id="rwAuthName" autocomplete="name" maxlength="50" style="display:block;width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);margin:6px 0 12px" placeholder="যেমন: রায়ান">
         <label for="rwAuthEmail">ইমেইল</label><input id="rwAuthEmail" type="email" required autocomplete="email" maxlength="120" style="display:block;width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);margin:6px 0 12px" placeholder="name@example.com">
-        <label for="rwAuthPassword">ডেমো পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)</label><input id="rwAuthPassword" type="password" required minlength="6" autocomplete="new-password" maxlength="100" style="display:block;width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);margin:6px 0 12px" placeholder="শুধু এই ডেমোর জন্য আলাদা পাসওয়ার্ড">
-        <button id="rwAuthSubmit" type="submit">প্রোফাইল তৈরি করো</button>
+        <label for="rwAuthPassword">পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)</label><input id="rwAuthPassword" type="password" required minlength="6" autocomplete="new-password" maxlength="100" style="display:block;width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);margin:6px 0 12px" placeholder="শুধু এই ডেমোর জন্য আলাদা পাসওয়ার্ড">
+        <button id="rwAuthSubmit" type="submit">অ্যাকাউন্ট তৈরি করো</button> <button type="button" class="soft" onclick="rwResetPassword()">পাসওয়ার্ড ভুলে গেছি</button>
       </form>
     </div>
     <div id="rwAccountLoggedIn" hidden>
@@ -206,7 +206,7 @@
 </section>
 </main><footer class="footer"><b>🌈 RAYAN WORLD V16</b><br>শিশুদের শেখা, খেলা, পড়া ও সৃজনশীলতার জন্য তৈরি একটি ডেমো ওয়েবসাইট। V14-তে ইংরেজি কথোপকথন ও নিরাপদ বিজ্ঞান কার্যক্রম যোগ হয়েছে।<br><small>এটি HTML ফাইল; অনলাইনে প্রকাশ করতে হোস্টিংয়ে আপলোড করতে হবে। বিজ্ঞাপন বা আয় স্বয়ংক্রিয়ভাবে সক্রিয় নয়।</small></footer>
 <script>
-let score=Number(localStorage.getItem('babyScore')||0);let dailyCount=Number(localStorage.getItem('babyDailyCount')||0);let dailyDate=localStorage.getItem('babyDailyDate')||'';const todayKey=new Date().toLocaleDateString('en-CA');if(dailyDate!==todayKey){dailyCount=0;dailyDate=todayKey;localStorage.setItem('babyDailyCount','0');localStorage.setItem('babyDailyDate',todayKey)}function addScore(n=1){score+=n;localStorage.setItem('babyScore',String(score));document.getElementById('score').textContent=score;document.getElementById('progressBar').style.width=Math.min(100,score*5)+'%';if(dailyCount<3){dailyCount++;localStorage.setItem('babyDailyCount',String(dailyCount));document.getElementById('dailyCount').textContent=dailyCount;document.getElementById('dailyProgress').style.width=(dailyCount/3*100)+'%';if(dailyCount>=3)document.getElementById('dailyOut').textContent='চ্যালেঞ্জ শেষ! পুরস্কার নিতে পারো! 🎉'}updateRank()}function resetScore(){score=0;localStorage.setItem('babyScore','0');document.getElementById('score').textContent=0;document.getElementById('progressBar').style.width='0%';updateRank()}
+let score=Number(localStorage.getItem('babyScore')||0);let dailyCount=Number(localStorage.getItem('babyDailyCount')||0);let dailyDate=localStorage.getItem('babyDailyDate')||'';const todayKey=new Date().toLocaleDateString('en-CA');if(dailyDate!==todayKey){dailyCount=0;dailyDate=todayKey;localStorage.setItem('babyDailyCount','0');localStorage.setItem('babyDailyDate',todayKey)}function addScore(n=1){score+=n;localStorage.setItem('babyScore',String(score));document.getElementById('score').textContent=score;document.getElementById('progressBar').style.width=Math.min(100,score*5)+'%';if(dailyCount<3){dailyCount++;localStorage.setItem('babyDailyCount',String(dailyCount));document.getElementById('dailyCount').textContent=dailyCount;document.getElementById('dailyProgress').style.width=(dailyCount/3*100)+'%';if(dailyCount>=3)document.getElementById('dailyOut').textContent='চ্যালেঞ্জ শেষ! পুরস্কার নিতে পারো! 🎉'}updateRank();if(window.rwSyncProgress)window.rwSyncProgress()}function resetScore(){score=0;localStorage.setItem('babyScore','0');document.getElementById('score').textContent=0;document.getElementById('progressBar').style.width='0%';updateRank();if(window.rwSyncProgress)window.rwSyncProgress()}
 const letters=[['অ','অজগর'],['আ','আম'],['ই','ইলিশ'],['ঈ','ঈগল'],['উ','উট'],['ঊ','ঊষা'],['ঋ','ঋতু'],['এ','একতারা'],['ঐ','ঐক্য'],['ও','ওল'],['ঔ','ঔষধ'],['ক','কলা'],['খ','খরগোশ'],['গ','গরু'],['ঘ','ঘুড়ি'],['চ','চাঁদ'],['ছ','ছাতা'],['জ','জাহাজ'],['ট','টিয়া'],['ড','ডালিম'],['ত','তারা'],['দ','দই'],['ন','নৌকা'],['প','পাখি'],['ফ','ফুল'],['ব','বই'],['ম','মাছ'],['র','রথ'],['ল','লাটিম'],['স','সাপ'],['হ','হাতি']];const ab=document.getElementById('alphabet');letters.forEach(([l,w])=>{let b=document.createElement('button');b.textContent=l;b.onclick=()=>{document.getElementById('letterOut').textContent=l+' — '+w;};ab.appendChild(b)});
 function speak(t){if(!('speechSynthesis'in window)){alert('এই ব্রাউজারে পড়ে শোনানোর সুবিধা নেই।');return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang='bn-BD';u.rate=.85;speechSynthesis.speak(u)}
 let fruitCount=3;function showCount(){fruitCount=1+Math.floor(Math.random()*7);document.getElementById('countEmojis').textContent=('🍎 ').repeat(fruitCount);document.getElementById('countOut').textContent='কয়টি আপেল গুনে বলো?'}function countFruit(){let a=prompt('কয়টি আপেল দেখছ? সংখ্যা লিখো');if(a===null)return;if(Number(a)===fruitCount){document.getElementById('countOut').textContent='সঠিক! বাহ! 🎉';addScore()}else document.getElementById('countOut').textContent='আবার গুনে দেখো!'}
@@ -389,14 +389,86 @@ function rwShowFavorites(){const fav=rwGetFavorites();rwRenderWords(rwWords.filt
 function rwShowRandomWord(){const w=rwWords[Math.floor(Math.random()*rwWords.length)];const input=document.getElementById('rwDictSearch');if(input)input.value=w[0];const cat=document.getElementById('rwDictCategory');if(cat)cat.value='all';rwRenderWords([w],'🌟 আজকের শব্দ');}
 let rwQuizWord=null;
 function rwDictQuizNew(){const panel=document.getElementById('rwDictQuiz');panel.hidden=false;rwQuizWord=rwWords[Math.floor(Math.random()*rwWords.length)];document.getElementById('rwDictQuizQ').textContent='“'+rwQuizWord[1]+'” শব্দটির ইংরেজি কী?';const choices=[rwQuizWord];while(choices.length<4){const w=rwWords[Math.floor(Math.random()*rwWords.length)];if(!choices.some(x=>x[0]===w[0]))choices.push(w);}choices.sort(()=>Math.random()-.5);const box=document.getElementById('rwDictQuizChoices');box.innerHTML='';choices.forEach(w=>{const b=document.createElement('button');b.className='choice';b.textContent=w[0];b.onclick=()=>{document.getElementById('rwDictQuizOut').textContent=w[0]===rwQuizWord[0]?'🎉 সঠিক উত্তর! +১ শেখার পয়েন্ট!':'আবার চেষ্টা করো। সঠিক উত্তর: '+rwQuizWord[0];};box.appendChild(b);});document.getElementById('rwDictQuizOut').textContent='সঠিক ইংরেজি শব্দটি বেছে নাও।';}
-let rwAuthMode='signup';
-function rwShowAuth(mode){rwAuthMode=mode;document.getElementById('rwAuthName').required=mode==='signup';document.getElementById('rwAuthName').style.display=mode==='signup'?'block':'none';document.querySelector('label[for="rwAuthName"]').style.display=mode==='signup'?'block':'none';document.getElementById('rwSignupTab').className=mode==='signup'?'':'soft';document.getElementById('rwLoginTab').className=mode==='login'?'':'soft';document.getElementById('rwAuthSubmit').textContent=mode==='signup'?'প্রোফাইল তৈরি করো':'লগইন';document.getElementById('rwAuthPassword').autocomplete=mode==='signup'?'new-password':'current-password';document.getElementById('rwAuthOut').textContent=mode==='signup'?'নতুন প্রোফাইল তৈরি করো।':'আগে এই ব্রাউজারে তৈরি করা প্রোফাইলে প্রবেশ করো।';}
-function rwB64(bytes){return btoa(String.fromCharCode(...new Uint8Array(bytes)));}
-async function rwPasswordHash(password,salt){const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:Uint8Array.from(atob(salt),c=>c.charCodeAt(0)),iterations:120000,hash:'SHA-256'},key,256);return rwB64(bits);}
-function rwAccounts(){try{return JSON.parse(localStorage.getItem('rwV16Accounts')||'{}');}catch(e){return {};}}
-async function rwSubmitAuth(event){event.preventDefault();const out=document.getElementById('rwAuthOut');const email=document.getElementById('rwAuthEmail').value.trim().toLowerCase();const password=document.getElementById('rwAuthPassword').value;const name=document.getElementById('rwAuthName').value.trim();if(!window.crypto?.subtle){out.textContent='এই ব্রাউজারে নিরাপদ ডেমো যাচাই সুবিধা নেই। ব্রাউজার আপডেট করে HTTPS সাইটে চেষ্টা করো।';return false;}if(!email||password.length<6){out.textContent='সঠিক ইমেইল ও অন্তত ৬ অক্ষরের ডেমো পাসওয়ার্ড দাও।';return false;}const accounts=rwAccounts();try{if(rwAuthMode==='signup'){if(!name){out.textContent='তোমার নাম লিখো।';return false;}if(accounts[email]){out.textContent='এই ইমেইলে এই ব্রাউজারে প্রোফাইল আছে। লগইন করে দেখো।';return false;}const salt=rwB64(crypto.getRandomValues(new Uint8Array(16)));const hash=await rwPasswordHash(password,salt);accounts[email]={name:name,salt:salt,hash:hash};localStorage.setItem('rwV16Accounts',JSON.stringify(accounts));localStorage.setItem('rwV16Session',email);out.textContent='প্রোফাইল তৈরি হয়েছে!';}else{const a=accounts[email];if(!a){out.textContent='এই ব্রাউজারে প্রোফাইল পাওয়া যায়নি। আগে সাইন আপ করো।';return false;}const hash=await rwPasswordHash(password,a.salt);if(hash!==a.hash){out.textContent='ইমেইল বা পাসওয়ার্ড মেলেনি।';return false;}localStorage.setItem('rwV16Session',email);out.textContent='লগইন সফল হয়েছে!';}document.getElementById('rwAuthPassword').value='';rwRenderSession();}catch(e){out.textContent='ব্রাউজার স্টোরেজে সমস্যা হয়েছে। স্টোরেজ সেটিংস পরীক্ষা করো।';}return false;}
-function rwRenderSession(){const email=localStorage.getItem('rwV16Session');const accounts=rwAccounts();const a=email&&accounts[email];document.getElementById('rwAccountLoggedOut').hidden=!!a;document.getElementById('rwAccountLoggedIn').hidden=!a;if(a){document.getElementById('rwWelcomeName').textContent='স্বাগতম, '+a.name+'!';document.getElementById('rwWelcomeEmail').textContent=email;}}
-function rwLogout(){localStorage.removeItem('rwV16Session');rwRenderSession();document.getElementById('rwAuthOut').textContent='লগআউট হয়েছে।';}
+const RW_SUPABASE_URL='https://bydspiujpnrquhiscwgb.supabase.co';
+const RW_SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5ZHNwaXVqcG5ycXVoaXNjd2diIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIzMjIwNTMsImV4cCI6MjEwNzg5ODA1M30.m_XlYr3C3UnnsB96C-01s8lTtmnwiHnH02hjlQ74jfw';
+let rwAuthMode='signup',rwAuthBusy=false;
+const rwSessionKey='rayanWorldSupabaseSessionV17';
+function rwSession(){try{return JSON.parse(localStorage.getItem(rwSessionKey)||'null')}catch(e){return null}}
+function rwSaveSession(s){if(s)localStorage.setItem(rwSessionKey,JSON.stringify(s));else localStorage.removeItem(rwSessionKey)}
+async function rwApi(path,options={},token=null){
+ const headers={'apikey':RW_SUPABASE_KEY,'Content-Type':'application/json',...(options.headers||{})};
+ if(token)headers.Authorization='Bearer '+token;
+ const response=await fetch(RW_SUPABASE_URL+path,{...options,headers});
+ let data={};try{data=await response.json()}catch(e){}
+ if(!response.ok){const msg=data.msg||data.message||data.error_description||data.error||'অনুরোধটি সম্পন্ন হয়নি।';throw new Error(msg)}
+ return data;
+}
+async function rwValidSession(){
+ let s=rwSession();if(!s||!s.access_token)return null;
+ if(s.expires_at&&Date.now()<s.expires_at-60000)return s;
+ if(!s.refresh_token){rwSaveSession(null);return null}
+ try{const fresh=await rwApi('/auth/v1/token?grant_type=refresh_token',{method:'POST',body:JSON.stringify({refresh_token:s.refresh_token})});fresh.expires_at=Date.now()+Number(fresh.expires_in||3600)*1000;rwSaveSession(fresh);return fresh}
+ catch(e){rwSaveSession(null);return null}
+}
+function rwShowAuth(mode){
+ rwAuthMode=mode;
+ document.getElementById('rwAuthName').required=mode==='signup';
+ document.getElementById('rwAuthName').style.display=mode==='signup'?'block':'none';
+ document.querySelector('label[for="rwAuthName"]').style.display=mode==='signup'?'block':'none';
+ document.getElementById('rwSignupTab').className=mode==='signup'?'':'soft';
+ document.getElementById('rwLoginTab').className=mode==='login'?'':'soft';
+ document.getElementById('rwAuthSubmit').textContent=mode==='signup'?'অ্যাকাউন্ট তৈরি করো':'লগইন';
+ document.getElementById('rwAuthPassword').autocomplete=mode==='signup'?'new-password':'current-password';
+ document.getElementById('rwAuthOut').textContent=mode==='signup'?'ইমেইল দিয়ে নতুন অনলাইন অ্যাকাউন্ট তৈরি করো।':'আপনার অনলাইন অ্যাকাউন্টে লগইন করুন।';
+}
+async function rwSubmitAuth(event){
+ event.preventDefault();if(rwAuthBusy)return false;
+ const out=document.getElementById('rwAuthOut'),btn=document.getElementById('rwAuthSubmit');
+ const email=document.getElementById('rwAuthEmail').value.trim().toLowerCase(),password=document.getElementById('rwAuthPassword').value,name=document.getElementById('rwAuthName').value.trim();
+ if(password.length<6){out.textContent='কমপক্ষে ৬ অক্ষরের পাসওয়ার্ড দিন।';return false}
+ rwAuthBusy=true;btn.disabled=true;out.textContent='একটু অপেক্ষা করুন…';
+ try{
+  let data;
+  if(rwAuthMode==='signup'){
+   if(!name)throw new Error('আপনার নাম লিখুন।');
+   data=await rwApi('/auth/v1/signup',{method:'POST',body:JSON.stringify({email,password,data:{full_name:name,site:'RAYAN WORLD'}})});
+   if(data.access_token){data.expires_at=Date.now()+Number(data.expires_in||3600)*1000;rwSaveSession(data);out.textContent='অ্যাকাউন্ট তৈরি হয়েছে!';await rwRenderSession();}
+   else {out.textContent='সাইন আপ অনুরোধ সফল হয়েছে। ইমেইল যাচাইকরণ চালু থাকলে আপনার ইনবক্সে আসা লিংকে চাপ দিন, তারপর লগইন করুন।';rwShowAuth('login');}
+  }else{
+   data=await rwApi('/auth/v1/token?grant_type=password',{method:'POST',body:JSON.stringify({email,password})});
+   data.expires_at=Date.now()+Number(data.expires_in||3600)*1000;rwSaveSession(data);document.getElementById('rwAuthPassword').value='';out.textContent='লগইন সফল হয়েছে!';await rwRenderSession();
+  }
+ }catch(e){out.textContent='সমস্যা: '+(e.message||'আবার চেষ্টা করুন।');}
+ finally{rwAuthBusy=false;btn.disabled=false}
+ return false;
+}
+async function rwResetPassword(){
+ const email=document.getElementById('rwAuthEmail').value.trim().toLowerCase(),out=document.getElementById('rwAuthOut');
+ if(!email){out.textContent='আগে আপনার ইমেইল লিখুন, তারপর “পাসওয়ার্ড ভুলে গেছি” চাপুন।';return}
+ try{await rwApi('/auth/v1/recover',{method:'POST',body:JSON.stringify({email,redirect_to:location.origin+location.pathname})});out.textContent='যদি এই ইমেইলে অ্যাকাউন্ট থাকে, পাসওয়ার্ড পুনরুদ্ধারের নির্দেশনা পাঠানো হবে। আপনার ইনবক্স দেখুন।'}
+ catch(e){out.textContent='পাসওয়ার্ড পুনরুদ্ধার অনুরোধ পাঠানো যায়নি: '+e.message}
+}
+async function rwRenderSession(){
+ const s=await rwValidSession(),user=s&&s.user;
+ document.getElementById('rwAccountLoggedOut').hidden=!!user;
+ document.getElementById('rwAccountLoggedIn').hidden=!user;
+ if(user){
+  const name=(user.user_metadata&&user.user_metadata.full_name)||user.email||'বন্ধু';
+  document.getElementById('rwWelcomeName').textContent='স্বাগতম, '+name+'!';
+  document.getElementById('rwWelcomeEmail').textContent=user.email||'';
+  const meta=user.user_metadata||{};
+  if(Number.isFinite(Number(meta.rw_score))&&meta.rw_score>score){score=Number(meta.rw_score);localStorage.setItem('babyScore',String(score));const el=document.getElementById('score');if(el)el.textContent=score;const bar=document.getElementById('progressBar');if(bar)bar.style.width=Math.min(100,score*5)+'%';if(typeof updateRank==='function')updateRank();}
+ }
+}
+async function rwSyncProgress(){
+ const s=await rwValidSession();if(!s||!s.access_token||!s.user)return;
+ try{await rwApi('/auth/v1/user',{method:'PUT',body:JSON.stringify({data:{...(s.user.user_metadata||{}),rw_score:score,rw_updated_at:new Date().toISOString()}})},s.access_token)}
+ catch(e){console.warn('RAYAN WORLD progress sync failed:',e.message)}
+}
+async function rwLogout(){
+ const s=rwSession();try{if(s&&s.access_token)await rwApi('/auth/v1/logout',{method:'POST'},s.access_token)}catch(e){}
+ rwSaveSession(null);await rwRenderSession();document.getElementById('rwAuthOut').textContent='লগআউট হয়েছে।';
+}
 document.addEventListener('DOMContentLoaded',()=>{rwSearchDictionary();rwShowAuth('signup');rwRenderSession();const input=document.getElementById('rwDictSearch');if(input)input.addEventListener('keydown',e=>{if(e.key==='Enter')rwSearchDictionary();});});
 </script>
 </body></html>
